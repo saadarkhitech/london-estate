@@ -14,7 +14,7 @@ namespace London_Estate
         static void Main()
         {
             FController fobj = new FController();
-            fobj.addPlaza("abc", 3, 3, 3, "basb", "isb");
+            fobj.addPlaza("test", 3, 3, 3, "basb", "isb");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new main());

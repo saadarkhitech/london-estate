@@ -19,7 +19,7 @@ namespace London_Estate
 
         public int addPlaza(string name, int floors, int shops, int flats, string add, string loc)
         {
-            string q = "Insert into Plaza(p_name,no_floors,no_shops,no_flats,addr,loc) values (@n,@fl,@sh,@ft,@addr,@loc) ";
+            string q = "Insert into Plaza(p_name,no_floors,no_shops,no_flats,addr,loc) values (@n,@fl,@sh,@ft,@addr,@loc); Select SCOPE_IDENTITY() ";
             SqlConnection conn = this.conect();
             conn.Open();
             SqlCommand sql = new SqlCommand(q, conn);
@@ -29,11 +29,111 @@ namespace London_Estate
             sql.Parameters.Add("@ft", flats);
             sql.Parameters.Add("@addr", add);
             sql.Parameters.Add("@loc", loc);
+            
+             int pid = int.Parse( sql.ExecuteScalar().ToString());
+             for (int i = 0; i < floors; i++)
+             {
+                 int a = i + 1;
+                 addFloor(pid + "_F"+ a +"", i+"", pid);
+             }
+             
+            return 0;
+        }
+
+
+        public int addFloor(string fId, string fpos, int f_parent)
+        {
+            string q = "Insert into Floor(f_id,f_pos,f_parent) values (@fid,@fpos,@fparnt)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@fid", fId);
+            sql.Parameters.Add("@fpos", fpos);
+            sql.Parameters.Add("@fparnt", f_parent);
+            
+            sql.ExecuteNonQuery();
+            return 0;
+        }
+
+        public int addShop(string sId, string fid, int owner_id, int rental_id, int agrmnt_id)
+        {
+            string q = "Insert into Shop(s_id,f_id,s_owner,s_rental,agremnt) values (@sid,@fid,@oid,@rid,@agid)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@sid", sId);
+            sql.Parameters.Add("@fid", fid);
+            sql.Parameters.Add("@oid", owner_id);
+            sql.Parameters.Add("@rid", rental_id);
+            sql.Parameters.Add("@agid", agrmnt_id);
 
             sql.ExecuteNonQuery();
             return 0;
         }
 
+        public int addFlat(string ftId, string f_id, int owner_id, int rental_id, int agrmnt_id)
+        {
+            string q = "Insert into Flat(ft_id,f_id,f_owner,f_rental,agremnt) values (@ftid,@fid,@oid,@rid,@agid)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@ftid", ftId);
+            sql.Parameters.Add("@fid", f_id);
+            sql.Parameters.Add("@oid", owner_id);
+            sql.Parameters.Add("@rid", rental_id);
+            sql.Parameters.Add("@agid", agrmnt_id);
+
+            sql.ExecuteNonQuery();
+            return 0;
+        }
+
+        public int addOwner(string name, string cnic, int dob, int contact)
+        {
+            string q = "Insert into Owner(name,cnic,dob,contact) values (@oname,@ocnic,@odob,@ocontact)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@oname", name);
+            sql.Parameters.Add("@ocnic", cnic);
+            sql.Parameters.Add("@odob", dob);
+            sql.Parameters.Add("@ocontct", contact);
+ 
+
+            sql.ExecuteNonQuery();
+            return 0;
+        }
+
+        public int addrental(string name, string cnic, int dob, int contact)
+        {
+            string q = "Insert into Rental(name,cnic,dob,contact) values (@oname,@ocnic,@odob,@ocontact)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@oname", name);
+            sql.Parameters.Add("@ocnic", cnic);
+            sql.Parameters.Add("@odob", dob);
+            sql.Parameters.Add("@ocontct", contact);
+
+
+            sql.ExecuteNonQuery();
+            return 0;
+        }
+
+        public int addAgremnt(string prptyp, DateTime strtDate, DateTime endDate, int agrPrd, float rentIncPerMont, float RentMonthly, float secAmt)
+        {
+            string q = "Insert into Adreement(prp_typ,agr_startDate,agr_endDate,agr_period,Rent_incrs_per,rent_monthly,sec_amnt) values (@prpTyp,@strtDate,@endDate,@agr_per,@rentIncr,@rentMon,@secAmt)";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@prp_typ", prptyp);
+            sql.Parameters.Add("@agr_startDate", strtDate);
+            sql.Parameters.Add("@agr_endDate", endDate);
+            sql.Parameters.Add("@agr_period", agrPrd);
+            sql.Parameters.Add("@Rent_incrs_per", rentIncPerMont);
+            sql.Parameters.Add("@rent_monthly", RentMonthly);
+            sql.Parameters.Add("@sec_amnt", secAmt);
+            return 0;
+        }
     }
 
 }
