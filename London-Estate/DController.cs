@@ -87,7 +87,7 @@ namespace London_Estate
             return 0;
         }
 
-        public int addOwner(string name, string cnic, int dob, int contact)
+        public int addOwner(string name, string cnic, DateTime dob, int contact)
         {
             string q = "Insert into Owner(name,cnic,dob,contact) values (@oname,@ocnic,@odob,@ocontact)";
             SqlConnection conn = this.conect();
@@ -103,7 +103,7 @@ namespace London_Estate
             return 0;
         }
 
-        public int addrental(string name, string cnic, int dob, int contact)
+        public int addrental(string name, string cnic, DateTime dob, int contact)
         {
             string q = "Insert into Rental(name,cnic,dob,contact) values (@oname,@ocnic,@odob,@ocontact)";
             SqlConnection conn = this.conect();
