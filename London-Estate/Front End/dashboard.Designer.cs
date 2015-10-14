@@ -38,10 +38,9 @@
             // 
             // btn_housemanagement
             // 
-            this.btn_housemanagement.Location = new System.Drawing.Point(109, 54);
-            this.btn_housemanagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_housemanagement.Location = new System.Drawing.Point(0, 84);
             this.btn_housemanagement.Name = "btn_housemanagement";
-            this.btn_housemanagement.Size = new System.Drawing.Size(359, 101);
+            this.btn_housemanagement.Size = new System.Drawing.Size(218, 50);
             this.btn_housemanagement.TabIndex = 0;
             this.btn_housemanagement.Text = "Houses Managment";
             this.btn_housemanagement.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@
             // btn_plazamanagement
             // 
             this.btn_plazamanagement.AllowDrop = true;
-            this.btn_plazamanagement.Location = new System.Drawing.Point(109, 244);
-            this.btn_plazamanagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_plazamanagement.Location = new System.Drawing.Point(222, 189);
             this.btn_plazamanagement.Name = "btn_plazamanagement";
-            this.btn_plazamanagement.Size = new System.Drawing.Size(359, 101);
+            this.btn_plazamanagement.Size = new System.Drawing.Size(218, 47);
             this.btn_plazamanagement.TabIndex = 1;
             this.btn_plazamanagement.Text = "Plaza Managment";
             this.btn_plazamanagement.UseVisualStyleBackColor = true;
@@ -65,19 +63,17 @@
             this.panel1.Controls.Add(this.btn_ownerinfo);
             this.panel1.Controls.Add(this.btn_housemanagement);
             this.panel1.Controls.Add(this.btn_plazamanagement);
-            this.panel1.Location = new System.Drawing.Point(235, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(74, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(591, 782);
+            this.panel1.Size = new System.Drawing.Size(443, 539);
             this.panel1.TabIndex = 2;
             // 
             // btn_renterinfo
             // 
             this.btn_renterinfo.AllowDrop = true;
-            this.btn_renterinfo.Location = new System.Drawing.Point(109, 631);
-            this.btn_renterinfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_renterinfo.Location = new System.Drawing.Point(225, 402);
             this.btn_renterinfo.Name = "btn_renterinfo";
-            this.btn_renterinfo.Size = new System.Drawing.Size(359, 101);
+            this.btn_renterinfo.Size = new System.Drawing.Size(218, 54);
             this.btn_renterinfo.TabIndex = 3;
             this.btn_renterinfo.Text = "Rental Information ";
             this.btn_renterinfo.UseVisualStyleBackColor = true;
@@ -85,21 +81,20 @@
             // btn_ownerinfo
             // 
             this.btn_ownerinfo.AllowDrop = true;
-            this.btn_ownerinfo.Location = new System.Drawing.Point(109, 443);
-            this.btn_ownerinfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ownerinfo.Location = new System.Drawing.Point(0, 297);
             this.btn_ownerinfo.Name = "btn_ownerinfo";
-            this.btn_ownerinfo.Size = new System.Drawing.Size(359, 101);
+            this.btn_ownerinfo.Size = new System.Drawing.Size(218, 50);
             this.btn_ownerinfo.TabIndex = 2;
             this.btn_ownerinfo.Text = "Owner Information";
             this.btn_ownerinfo.UseVisualStyleBackColor = true;
+            this.btn_ownerinfo.Click += new System.EventHandler(this.btn_ownerinfo_Click);
             // 
             // dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 937);
+            this.ClientSize = new System.Drawing.Size(586, 602);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "dashboard";
             this.Text = "dashboard";
             this.panel1.ResumeLayout(false);

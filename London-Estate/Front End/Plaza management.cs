@@ -20,5 +20,14 @@ namespace London_Estate
         {
 
         }
+
+        private void btn_addnewplaza_Click(object sender, EventArgs e)
+        {
+            Form New_Plaza_Information = new New_Plaza_Information();
+
+            New_Plaza_Information.Show();
+
+            this.Hide();
+        }
     }
 }

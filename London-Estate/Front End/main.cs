@@ -13,6 +13,7 @@ namespace London_Estate
     {
         public main()
         {
+            
             InitializeComponent();
         }
 
@@ -38,8 +39,13 @@ namespace London_Estate
             
             dashborad_form.Show();
 
-            this.Hide();
             
+            
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
         }
        
             

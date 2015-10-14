@@ -26,17 +26,22 @@ namespace London_Estate
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            comboBox_ownership.Items.Add("Shop");
-            comboBox_ownership.Items.Add("Flat");
-
-            comboBox_ownership.SelectedItem = "Shop";
-        }
+       
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_New_Owner_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'rsDbDataSet.Plaza' table. You can move, or remove it, as needed.
+            this.plazaTableAdapter.Fill(this.rsDbDataSet.Plaza);
 
         }
     }

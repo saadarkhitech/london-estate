@@ -27,5 +27,16 @@ namespace London_Estate
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btn_AddOwner_Click(object sender, EventArgs e)
+        {
+            Add_New_Owner adnewowner = new Add_New_Owner();
+            adnewowner.Show();
+        }
     }
 }

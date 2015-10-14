@@ -27,5 +27,12 @@ namespace London_Estate
             Form plaza_manage = new Plaza_management();
             plaza_manage.Show();
         }
+
+        private void btn_ownerinfo_Click(object sender, EventArgs e)
+        {
+            Owner_Information Ow = new Owner_Information();
+            Ow.Show();
+
+        }
     }
 }

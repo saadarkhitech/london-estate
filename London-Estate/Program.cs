@@ -13,8 +13,7 @@ namespace London_Estate
         [STAThread]
         static void Main()
         {
-            FController fobj = new FController();
-            fobj.addPlaza("test", 3, 3, 3, "basb", "isb");
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new main());
