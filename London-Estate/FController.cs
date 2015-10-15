@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -39,10 +40,10 @@ namespace London_Estate
             return 0;
         }
 
-        public int addOwner(string name, string cnic, DateTime dob, int contact)
+        public int addOwner(string name, string cnic, DateTime dob, string contact, string bankName, string accNo)
         {
-            dbC.addOwner(name,cnic,dob,contact);
-            return 0;
+            return dbC.addOwner(name, cnic, dob, contact, bankName, accNo);
+            
         }
 
         public int addRental(string name, string cnic, DateTime dob, int contact)
@@ -51,7 +52,50 @@ namespace London_Estate
             return 0;
         }
 
+        public SqlDataReader getShopsOfFloor(string florId)
+        {
+            return dbC.getShopsOfFloor(florId);
+        }
 
+        public SqlDataReader getFlatsOfFloor(string florId)
+        {
+            return dbC.getFlatsOfFloor(florId);
+
+        }
+
+
+        public SqlDataReader getFloorsPlaza(int plazaId)
+        {
+            return dbC.getFloorsPlaza(plazaId);
+        }
+
+        public SqlDataReader getAllPlazaIds()
+        {
+            return dbC.getAllPlazaIds();
+        }
+
+        public bool diffRentiateFlatShop(string id)
+        {// if shop then returns true, for flat it returns false
+
+            SqlDataReader rdr1 = dbC.searchShop(id);
+            SqlDataReader rdr2 = dbC.searchFlat(id);
+
+            if (rdr1 == null)
+                return false;
+            else
+                return true;
+        }
+
+        public int addOwnerOfShop(string sid, int oid)
+        {
+            return dbC.addOnwerOfShop(sid, oid);
+        }
+
+
+        public int addOwnerOfFlat(string ftid, int oid)
+        {
+            return dbC.addOnwerOfFlat(ftid, oid);
+        }
     }
 
 }

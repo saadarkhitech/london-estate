@@ -12,6 +12,7 @@ namespace London_Estate
         {
             string connString = "Data Source=localhost;Initial Catalog=RsDb;Integrated Security=True";
             SqlConnection abc = new SqlConnection(connString);
+            
             return abc;
 
         
@@ -112,20 +113,21 @@ namespace London_Estate
             return 0;
         }
 
-        public int addOwner(string name, string cnic, DateTime dob, int contact)
+        public int addOwner(string name, string cnic, DateTime dob, string contact,string bankName,string accNo)
         {
-            string q = "Insert into Owner(name,cnic,dob,contact) values (@oname,@ocnic,@odob,@ocontact)";
+            string q = "Insert into Owner(name,cnic,dob,contact,bank_name,bank_acc_no) values (@oname,@ocnic,@odob,@ocontact,@bankName,@accNo); select scope_identity()";
             SqlConnection conn = this.conect();
             conn.Open();
             SqlCommand sql = new SqlCommand(q, conn);
             sql.Parameters.Add("@oname", name);
             sql.Parameters.Add("@ocnic", cnic);
             sql.Parameters.Add("@odob", dob);
-            sql.Parameters.Add("@ocontct", contact);
- 
-
-            sql.ExecuteNonQuery();
-            return 0;
+            sql.Parameters.Add("@ocontact", contact);
+            sql.Parameters.Add("@bankName", bankName);
+            sql.Parameters.Add("@accNo", accNo);
+  
+             return int.Parse(sql.ExecuteScalar().ToString());
+           
         }
 
         public int addrental(string name, string cnic, DateTime dob, int contact)
@@ -158,6 +160,114 @@ namespace London_Estate
             sql.Parameters.Add("@rent_monthly", RentMonthly);
             sql.Parameters.Add("@sec_amnt", secAmt);
             return 0;
+        }
+
+
+        public SqlDataReader getAllPlazaIds()
+        {
+        
+            string q = "select p_id from Plaza";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q,conn);
+
+            return sql.ExecuteReader();
+        
+        }
+
+
+        public SqlDataReader getFloorsPlaza(int plazaId)
+        {
+
+            string q = "select f_id from Floor where f_parent=@plazaID";
+            
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@plazaID", plazaId);
+
+            return sql.ExecuteReader();
+
+        }
+
+        public SqlDataReader getShopsOfFloor(string florId)
+        {
+
+            string q = "select s_id from Shop where f_id=@floorId";
+
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@floorId", florId);
+
+            return sql.ExecuteReader();
+
+        }
+
+        public SqlDataReader getFlatsOfFloor(string florId)
+        {
+
+            string q = "select ft_id from flat where f_id=@floorId";
+
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@floorId", florId);
+
+            return sql.ExecuteReader();
+
+        }
+
+        public SqlDataReader searchShop(string s_id)
+        {
+            string q = "select s_id from shop where s_id=@s_id";
+
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@s_id", s_id);
+
+            return sql.ExecuteReader();
+        
+        }
+
+
+        public SqlDataReader searchFlat(string ft_id)
+        {
+            string q = "select ft_id from flat where ft_id=@ft_id";
+
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@ft_id", ft_id);
+
+            return sql.ExecuteReader();
+
+        }
+
+        public int addOnwerOfShop(string s_id, int oid)
+        {
+            string q = "update shop set s_owner=@oid where s_id=@s_id";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@oid", oid);
+            sql.Parameters.Add("@s_id", s_id);
+
+           return sql.ExecuteNonQuery();
+
+        }
+
+        public int addOnwerOfFlat(string ft_id, int oid)
+        {
+            string q = "update Flat set f_owner=@oid where ft_id=@ft_id";
+            SqlConnection conn = this.conect();
+            conn.Open();
+            SqlCommand sql = new SqlCommand(q, conn);
+            sql.Parameters.Add("@oid", oid);
+            sql.Parameters.Add("@ft_id", ft_id);
+
+            return sql.ExecuteNonQuery(); ;
         }
     }
 
