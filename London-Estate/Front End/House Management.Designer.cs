@@ -42,7 +42,7 @@
             this.btn_addnewhouse.TabIndex = 3;
             this.btn_addnewhouse.Text = "Add New House";
             this.btn_addnewhouse.UseVisualStyleBackColor = true;
-            this.btn_addnewhouse.Click += new System.EventHandler(this.btn_addnewhouse_Click);
+            
             // 
             // btn_viewallhouses
             // 
@@ -53,7 +53,7 @@
             this.btn_viewallhouses.TabIndex = 2;
             this.btn_viewallhouses.Text = "View All Houses";
             this.btn_viewallhouses.UseVisualStyleBackColor = true;
-            this.btn_viewallhouses.Click += new System.EventHandler(this.btn_viewallplaza_Click);
+            
             // 
             // btn_back
             // 
@@ -64,7 +64,7 @@
             this.btn_back.TabIndex = 4;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            
             // 
             // House_Management
             // 
