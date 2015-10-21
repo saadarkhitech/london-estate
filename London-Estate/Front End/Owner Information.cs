@@ -37,6 +37,24 @@ namespace London_Estate
         {
             Add_New_Owner adnewowner = new Add_New_Owner();
             adnewowner.Show();
+            this.Hide();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            dashboard dashborad_form = new dashboard();
+            dashborad_form.Show();
+            this.Hide();
+        }
+
+        private void Btn_newhouseowner_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_plazaOwnerList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

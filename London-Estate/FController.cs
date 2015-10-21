@@ -39,9 +39,9 @@ namespace London_Estate
             return 0;
         }
 
-        public int addOwner(string name, string cnic, DateTime dob, int contact)
+        public int addOwner(string name, string cnic, DateTime dob, string contact)
         {
-            dbC.addOwner(name,cnic,dob,contact);
+           // dbC.addOwner(name,cnic,dob,contact,);
             return 0;
         }
 

@@ -110,5 +110,12 @@ namespace London_Estate
 
                 FController.getController().addPlaza(plzaName, floors, total_shops, total_flats, add, loc,checkBox_basment.Checked,s_f);           
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Plaza_management pm = new Plaza_management();
+            pm.Show();
+            this.Hide();
+        }
     }
 }

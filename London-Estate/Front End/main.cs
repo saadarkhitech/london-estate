@@ -35,7 +35,7 @@ namespace London_Estate
         private void btn_login_Click(object sender, EventArgs e)
         {
 
-            Form dashborad_form = new dashboard();
+            dashboard dashborad_form = new dashboard();
             
             dashborad_form.Show();
 

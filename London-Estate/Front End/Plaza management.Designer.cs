@@ -30,14 +30,14 @@
         {
             this.btn_viewallplaza = new System.Windows.Forms.Button();
             this.btn_addnewplaza = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_viewallplaza
             // 
-            this.btn_viewallplaza.Location = new System.Drawing.Point(305, 149);
-            this.btn_viewallplaza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_viewallplaza.Location = new System.Drawing.Point(225, 42);
             this.btn_viewallplaza.Name = "btn_viewallplaza";
-            this.btn_viewallplaza.Size = new System.Drawing.Size(213, 96);
+            this.btn_viewallplaza.Size = new System.Drawing.Size(160, 78);
             this.btn_viewallplaza.TabIndex = 0;
             this.btn_viewallplaza.Text = "All Plazas List";
             this.btn_viewallplaza.UseVisualStyleBackColor = true;
@@ -45,23 +45,32 @@
             // 
             // btn_addnewplaza
             // 
-            this.btn_addnewplaza.Location = new System.Drawing.Point(305, 396);
-            this.btn_addnewplaza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addnewplaza.Location = new System.Drawing.Point(28, 42);
             this.btn_addnewplaza.Name = "btn_addnewplaza";
-            this.btn_addnewplaza.Size = new System.Drawing.Size(213, 96);
+            this.btn_addnewplaza.Size = new System.Drawing.Size(160, 78);
             this.btn_addnewplaza.TabIndex = 1;
             this.btn_addnewplaza.Text = "Add New Plaza";
             this.btn_addnewplaza.UseVisualStyleBackColor = true;
             this.btn_addnewplaza.Click += new System.EventHandler(this.btn_addnewplaza_Click);
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(28, 556);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(75, 23);
+            this.btn_back.TabIndex = 3;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Plaza_management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 753);
+            this.ClientSize = new System.Drawing.Size(586, 612);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_addnewplaza);
             this.Controls.Add(this.btn_viewallplaza);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Plaza_management";
             this.Text = "Plaza Mnagement";
             this.ResumeLayout(false);
@@ -72,5 +81,6 @@
 
         private System.Windows.Forms.Button btn_viewallplaza;
         private System.Windows.Forms.Button btn_addnewplaza;
+        private System.Windows.Forms.Button btn_back;
     }
 }
