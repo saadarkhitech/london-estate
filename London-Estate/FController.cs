@@ -80,10 +80,10 @@ namespace London_Estate
             SqlDataReader rdr1 = dbC.searchShop(id);
             SqlDataReader rdr2 = dbC.searchFlat(id);
 
-            if (rdr1 == null)
-                return false;
-            else
+            if (rdr1.HasRows)
                 return true;
+            else
+                return false;
         }
 
         public int addOwnerOfShop(string sid, int oid)

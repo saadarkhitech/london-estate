@@ -9,9 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>London_Estate</RootNamespace>
     <AssemblyName>London-Estate</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +30,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,86 +44,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="allDataSelected.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>allDataSelected.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DController.cs" />
-    <Compile Include="FController.cs" />
-    <Compile Include="Front End\Add New Plaza Owner.cs">
+    <Compile Include="Add New Owner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\Add New Plaza Owner.Designer.cs">
-      <DependentUpon>Add New Plaza Owner.cs</DependentUpon>
+    <Compile Include="Add New Owner.Designer.cs">
+      <DependentUpon>Add New Owner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\dashboard.cs">
+    <Compile Include="Agreement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\dashboard.Designer.cs">
+    <Compile Include="Agreement.Designer.cs">
+      <DependentUpon>Agreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\House Management.cs">
+    <Compile Include="House Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\House Management.Designer.cs">
+    <Compile Include="House Management.Designer.cs">
       <DependentUpon>House Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\main.cs">
+    <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\main.Designer.cs">
+    <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\New Plaza Information.cs">
+    <Compile Include="New Plaza Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\New Plaza Information.Designer.cs">
+    <Compile Include="New Plaza Information.Designer.cs">
       <DependentUpon>New Plaza Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\Owner Information.cs">
+    <Compile Include="Owner Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\Owner Information.Designer.cs">
+    <Compile Include="Owner Information.Designer.cs">
       <DependentUpon>Owner Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\Plaza management.cs">
+    <Compile Include="Plaza management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front End\Plaza management.Designer.cs">
+    <Compile Include="Plaza management.Designer.cs">
       <DependentUpon>Plaza management.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RsDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RsDbDataSet.xsd</DependentUpon>
+    <Compile Include="Rental Information.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RsDbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RsDbDataSet1.xsd</DependentUpon>
+    <Compile Include="Rental Information.Designer.cs">
+      <DependentUpon>Rental Information.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Front End\Add New Plaza Owner.resx">
-      <DependentUpon>Add New Plaza Owner.cs</DependentUpon>
+    <EmbeddedResource Include="Add New Owner.resx">
+      <DependentUpon>Add New Owner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\dashboard.resx">
+    <EmbeddedResource Include="Agreement.resx">
+      <DependentUpon>Agreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\House Management.resx">
+    <EmbeddedResource Include="House Management.resx">
       <DependentUpon>House Management.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\main.resx">
+    <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\New Plaza Information.resx">
+    <EmbeddedResource Include="New Plaza Information.resx">
       <DependentUpon>New Plaza Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\Owner Information.resx">
+    <EmbeddedResource Include="Owner Information.resx">
       <DependentUpon>Owner Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\Plaza management.resx">
+    <EmbeddedResource Include="Plaza management.resx">
       <DependentUpon>Plaza management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -137,20 +132,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="allDataSelected.xsc">
-      <DependentUpon>allDataSelected.xsd</DependentUpon>
-    </None>
-    <None Include="allDataSelected.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>allDataSelected.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="allDataSelected.xss">
-      <DependentUpon>allDataSelected.xsd</DependentUpon>
-    </None>
-    <None Include="app.config" />
+    <EmbeddedResource Include="Rental Information.resx">
+      <DependentUpon>Rental Information.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,28 +145,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RsDbDataSet.xsc">
-      <DependentUpon>RsDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RsDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RsDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RsDbDataSet.xss">
-      <DependentUpon>RsDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RsDbDataSet1.xsc">
-      <DependentUpon>RsDbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="RsDbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RsDbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RsDbDataSet1.xss">
-      <DependentUpon>RsDbDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
