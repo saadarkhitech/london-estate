@@ -74,12 +74,6 @@
     <Compile Include="Front End\All House Listing.Designer.cs">
       <DependentUpon>All House Listing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\All Plaza Listing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Front End\All Plaza Listing.Designer.cs">
-      <DependentUpon>All Plaza Listing.cs</DependentUpon>
-    </Compile>
     <Compile Include="allDataSelected.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,12 +123,6 @@
     <Compile Include="Front End\New Plaza Information.Designer.cs">
       <DependentUpon>New Plaza Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front End\Other Expenses Details.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Front End\Other Expenses Details.Designer.cs">
-      <DependentUpon>Other Expenses Details.cs</DependentUpon>
-    </Compile>
     <Compile Include="Front End\Owner Information.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,12 +140,6 @@
     </Compile>
     <Compile Include="Front End\Monthly Rent Information.Designer.cs">
       <DependentUpon>Monthly Rent Information.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Front End\Plaza View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Front End\Plaza View.Designer.cs">
-      <DependentUpon>Plaza View.cs</DependentUpon>
     </Compile>
     <Compile Include="Front End\Add Recieved Rent Information.cs">
       <SubType>Form</SubType>
@@ -189,9 +171,6 @@
     <EmbeddedResource Include="Front End\Add New Plaza Owner.resx">
       <DependentUpon>Add New Plaza Owner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\All Plaza Listing.resx">
-      <DependentUpon>All Plaza Listing.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Front End\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +186,6 @@
     <EmbeddedResource Include="Front End\New Plaza Information.resx">
       <DependentUpon>New Plaza Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front End\Other Expenses Details.resx">
-      <DependentUpon>Other Expenses Details.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Front End\Owner Information.resx">
       <DependentUpon>Owner Information.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Front End\Monthly Rent Information.resx">
       <DependentUpon>Monthly Rent Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Front End\Plaza View.resx">
-      <DependentUpon>Plaza View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front End\Add Recieved Rent Information.resx">
       <DependentUpon>Add Recieved Rent Information.cs</DependentUpon>

@@ -18,9 +18,9 @@ namespace London_Estate
 
         private void btn_viewallplaza_Click(object sender, EventArgs e)
         {
-            All_Plaza_Listing apl = new All_Plaza_Listing();
-            apl.Show();
-            this.Hide();
+        //    All_Plaza_Listing apl = new All_Plaza_Listing();
+        //    apl.Show();
+        //    this.Hide();
         }
 
         private void btn_addnewplaza_Click(object sender, EventArgs e)
